@@ -1,2 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <string-array name="Mobile_App">
+        <item>Can I access free services without registering</item>
+        <item>What free services can I get before registering</item>
+        <item>Does the app provide PIN registration service</item>
+        <item>What Tax services can I access after I register</item>
+        <item>What do I do if I have an issue with my app</item>
+    </string-array>
+</resources>

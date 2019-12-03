@@ -24,13 +24,10 @@ public class IntroActivity extends AppCompatActivity {
     private ViewPager screenPager;
     IntroViewPagerAdapter introViewPagerAdapter;
     TabLayout tabIndicator;
-    Button btnNext;
-    Button btnGetStarted;
+    Button btnNext,btnGetStarted, btnBack;
     Animation btnAnim;
     int position = 0;
     TextView tvSkip;
-    Button btnBack;
-
 
     @Override
     protected void onCreate(final Bundle savedInstanceState) {
@@ -150,7 +147,7 @@ public class IntroActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 //Fungua first screen
-                Intent mainActivity = new Intent(getApplicationContext(), MainActivity.class);
+                Intent mainActivity = new Intent(getApplicationContext(), Agreement.class);
                 startActivity(mainActivity);
 
                 //use sharedpreference to store boolean so that nxt time user hapati this screens

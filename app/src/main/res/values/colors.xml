@@ -18,4 +18,9 @@
     <color name="splash_screen_dark">#0691b8</color>
     <color name="splash_text_color">#ffffff</color>
 
+    <!-- Switch Colors   -->
+    <color name="disable_forground_gray">#42221f1f</color>
+    <color name="disable_thumb_gray">#1c000000</color>
+    <color name="enable_thumb_green">#ED1C24</color>
+
 </resources>
