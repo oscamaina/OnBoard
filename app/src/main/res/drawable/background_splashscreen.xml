@@ -4,7 +4,7 @@
     <item android:drawable="@color/splash_text_color"/>
 
     <item>
-        <bitmap android:src="@drawable/kralogo"
-            android:gravity="center"/>
+        <bitmap android:src="@drawable/thumbnail"
+            android:gravity="fill"/>
     </item>
 </layer-list>

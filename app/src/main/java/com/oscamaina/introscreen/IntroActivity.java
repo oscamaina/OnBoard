@@ -29,6 +29,7 @@ public class IntroActivity extends AppCompatActivity {
     Animation btnAnim;
     int position = 0;
     TextView tvSkip;
+    Button btnBack;
 
 
     @Override
@@ -58,12 +59,13 @@ public class IntroActivity extends AppCompatActivity {
         tabIndicator = findViewById(R.id.tab_indicator);
         btnAnim = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.button_animation);
         tvSkip = findViewById(R.id.tv_skip);
+        btnBack = findViewById(R.id.btn_back);
 
         //fill list screen
         final List<ScreenItem> mList = new ArrayList<>();
-        mList.add(new ScreenItem("Fresh Cabbages", "The quick brown fox jumps over the lazy dog, The quick brown fox jumps over the lazy dog",R.drawable.img1));
-        mList.add(new ScreenItem("Fast Delivery", "The quick brown fox jumps over the lazy dog, The quick brown fox jumps over the lazy dog",R.drawable.img2));
-        mList.add(new ScreenItem("Easy Payment", "The quick brown fox jumps over the lazy dog, The quick brown fox jumps over the lazy dog",R.drawable.img3));
+        mList.add(new ScreenItem("To Do", "To Do",R.drawable.kralogo));
+        mList.add(new ScreenItem("To Do", "To Do",R.drawable.kralogo));
+        mList.add(new ScreenItem("To Do", "To Do",R.drawable.kralogo));
 
 
         //setup viewPager
@@ -74,7 +76,7 @@ public class IntroActivity extends AppCompatActivity {
         //setup tablayout with viewpager
         tabIndicator.setupWithViewPager(screenPager);
 
-        //set clicklistner on button
+        //set clicklistner on button next
         btnNext.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -86,8 +88,19 @@ public class IntroActivity extends AppCompatActivity {
                 }
                 //when on last screen show get started button and hide the indicators
                 if (position == mList.size() -1)
-                    
                     loadLastScreen();
+            }
+        });
+
+        //Clicklistner on Back button
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                position = screenPager.getCurrentItem();
+                if (position == mList.size() -1){
+                    position--;
+                    screenPager.setCurrentItem(position);
+                }
             }
         });
 
@@ -95,11 +108,29 @@ public class IntroActivity extends AppCompatActivity {
         tabIndicator.addOnTabSelectedListener(new TabLayout.BaseOnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-                if (tab.getPosition() == mList.size() -1){
+                if (tab.getPosition() == 0){
+                    btnNext.setVisibility(View.VISIBLE);
+                    btnGetStarted.setVisibility(View.INVISIBLE);
+                    tabIndicator.setVisibility(View.VISIBLE);
+                    tvSkip.setVisibility(View.VISIBLE);
+                    btnBack.setVisibility(View.INVISIBLE);
+
+                }else if (tab.getPosition() == mList.size() -1){
+                    btnNext.setVisibility(View.INVISIBLE);
+                    btnGetStarted.setVisibility(View.VISIBLE);
+                    tabIndicator.setVisibility(View.INVISIBLE);
+                    tvSkip.setVisibility(View.INVISIBLE);
+                    btnBack.setVisibility(View.VISIBLE);
+//                    btnNext.setText("Continue");
                     loadLastScreen();
 
+                }else{
+                    btnNext.setVisibility(View.VISIBLE);
+                    btnGetStarted.setVisibility(View.INVISIBLE);
+                    tabIndicator.setVisibility(View.VISIBLE);
+                    tvSkip.setVisibility(View.VISIBLE);
+                    btnBack.setVisibility(View.VISIBLE);
                 }
-
             }
 
             @Override
@@ -153,10 +184,6 @@ public class IntroActivity extends AppCompatActivity {
 
     // show get started button and hide the indicators and button next
     private void loadLastScreen() {
-        btnNext.setVisibility(View.INVISIBLE);
-        btnGetStarted.setVisibility(View.VISIBLE);
-        tabIndicator.setVisibility(View.INVISIBLE);
-
         //set Animation
         btnGetStarted.setAnimation(btnAnim);
     }
