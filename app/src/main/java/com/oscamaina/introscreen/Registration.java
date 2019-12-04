@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class Registration extends AppCompatActivity implements View.OnClickListener{
-    Button btnBack;
+    Button btnBack, btnNext;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,8 +19,10 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
         getSupportActionBar().hide();
 
         btnBack = findViewById(R.id.btn_regback);
+        btnNext = findViewById(R.id.btn_regNext);
 
         btnBack.setOnClickListener(this);
+        btnNext.setOnClickListener(this);
     }
 
     @Override
@@ -29,6 +31,10 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_regback:
                 Intent landActivity = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(landActivity);
+                break;
+            case R.id.btn_regNext:
+                Intent detailsActivity = new Intent(getApplicationContext(), Personaldetails.class);
+                startActivity(detailsActivity);
                 break;
     }
 }}
