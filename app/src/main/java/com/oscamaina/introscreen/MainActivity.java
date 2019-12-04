@@ -48,6 +48,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Intent abtActivity = new Intent(getApplicationContext(), About.class);
                 startActivity(abtActivity);
                 break;
+            case R.id.btn_login:
+                Intent loginActivity = new Intent(getApplicationContext(), Login.class);
+                startActivity(loginActivity);
+                break;
+            case R.id.btn_register:
+                Intent registerActivity = new Intent(getApplicationContext(), Registration.class);
+                startActivity(registerActivity);
+                break;
         }
 
     }

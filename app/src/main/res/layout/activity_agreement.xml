@@ -66,6 +66,7 @@
         android:layout_marginTop="505dp"
         android:layout_marginEnd="49dp"
         android:layout_marginBottom="86dp"
+        android:background="@drawable/btn_gradient_style"
         android:text="Continue"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

@@ -142,7 +142,6 @@ public class IntroActivity extends AppCompatActivity {
         });
 
         //Get started click listner
-
         btnGetStarted.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
