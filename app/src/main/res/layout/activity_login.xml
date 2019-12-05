@@ -60,14 +60,15 @@
     <EditText
         android:id="@+id/txt_username"
         android:layout_width="118dp"
-        android:layout_height="22dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="47dp"
         android:layout_marginTop="204dp"
         android:layout_marginEnd="25dp"
         android:layout_marginBottom="414dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Nationa ID/PIN"
+        android:hint="National ID/PIN"
+        android:textColorHint="@color/intro_description_color"
         android:textAlignment="viewStart"
         android:textSize="17dp"
         android:textStyle="bold"
@@ -77,14 +78,16 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/Password"
+        android:id="@+id/txt_password"
         android:layout_width="118dp"
-        android:layout_height="22dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="47dp"
         android:layout_marginTop="201dp"
         android:layout_marginEnd="25dp"
         android:layout_marginBottom="327dp"
         android:ems="10"
+        android:hint="Password"
+        android:textColorHint="@color/intro_description_color"
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -109,7 +112,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="105dp"
@@ -149,6 +152,7 @@
         android:layout_marginEnd="105dp"
         android:layout_marginBottom="70dp"
         android:text="Register"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

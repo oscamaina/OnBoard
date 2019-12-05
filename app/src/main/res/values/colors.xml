@@ -23,4 +23,7 @@
     <color name="disable_thumb_gray">#1c000000</color>
     <color name="enable_thumb_green">#ED1C24</color>
 
+    <!--    Radio button colo-->
+    <color name="checked_radio_button">#00ff00</color>
+
 </resources>

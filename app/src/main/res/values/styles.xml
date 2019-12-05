@@ -25,5 +25,9 @@
         <item name="android:colorForeground">#42221f1f
         </item>
     </style>
+    
+    <style name="RaddioButtonStyle" parent="Theme.AppCompat.Light">
+        <item name="colorAccent">@color/checked_radio_button</item>
+    </style>
 
 </resources>
