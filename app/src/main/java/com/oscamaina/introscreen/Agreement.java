@@ -29,11 +29,13 @@ public class Agreement extends AppCompatActivity {
         btnContinue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (swtTerms.isChecked() && swtData.isChecked()){
-                Intent agreeActivity = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(agreeActivity);
-            }else {
-
+                if (swtTerms.isChecked() && swtData.isChecked()) {
+                    Intent agreeActivity = new Intent(getApplicationContext(), MainActivity.class);
+                    startActivity(agreeActivity);
+                }
+                else {
+//                    Toast.makeText(this, "Please agree to the T&Cs to proceed",
+//                            Toast.LENGTH_SHORT).show();
                 }
             }
         });
