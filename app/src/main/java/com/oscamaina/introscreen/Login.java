@@ -1,13 +1,13 @@
 package com.oscamaina.introscreen;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class Login extends AppCompatActivity implements View.OnClickListener{
     Button btnBack, btnRegister, btnLogin;
@@ -53,7 +53,7 @@ public class Login extends AppCompatActivity implements View.OnClickListener{
                 startActivity(mainActivity);
                 break;
             case R.id.btn_register:
-                Intent registerActivity = new Intent(getApplicationContext(), Registration.class);
+                Intent registerActivity = new Intent(getApplicationContext(), Register.class);
                 startActivity(registerActivity);
                 break;
             case R.id.btn_login:

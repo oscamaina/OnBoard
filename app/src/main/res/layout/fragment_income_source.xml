@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="match_parent"
-    android:layout_gravity="center"
+    android:layout_width="360dp"
+    android:layout_height="640dp"
+    android:layout_gravity="center|clip_vertical|center_horizontal"
     tools:context=".IncomeSourceFragment">
 
 
@@ -11,22 +12,30 @@
         android:id="@+id/textView9"
         android:layout_width="282dp"
         android:layout_height="22dp"
-        android:layout_marginTop="14dp"
         android:layout_marginStart="39dp"
-        android:layout_marginBottom="438dp"
+        android:layout_marginTop="179dp"
         android:layout_marginEnd="39dp"
+        android:layout_marginBottom="438dp"
+        android:text="Do you have any source of income?"
         android:textSize="17dp"
         android:textStyle="bold"
-        android:text="Do you have any source of income?" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <RadioGroup
         android:id="@+id/Radiogroup"
         android:layout_width="167dp"
         android:layout_height="20dp"
-        android:layout_marginTop="76dp"
         android:layout_marginStart="114dp"
+        android:layout_marginTop="241dp"
+        android:layout_marginEnd="113dp"
         android:layout_marginBottom="384dp"
-        android:layout_marginEnd="113dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <RadioButton
             android:id="@+id/radio_yes"
@@ -53,44 +62,60 @@
         android:id="@+id/spinner"
         android:layout_width="270dp"
         android:layout_height="45dp"
-        android:layout_marginTop="98dp"
         android:layout_marginStart="45dp"
-        android:layout_marginBottom="331dp"
+        android:layout_marginTop="263dp"
         android:layout_marginEnd="45dp"
-        android:spinnerMode="dropdown"/>
+        android:layout_marginBottom="331dp"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView10"
         android:layout_width="270dp"
         android:layout_height="45dp"
         android:layout_marginStart="44dp"
-        android:layout_marginTop="183dp"
+        android:layout_marginTop="348dp"
         android:layout_marginEnd="46dp"
-        android:layout_marginBottom="183dp"
+        android:layout_marginBottom="246dp"
+        android:text="Location"
+        android:textAlignment="center"
         android:textSize="17dp"
         android:textStyle="bold"
-        android:textAlignment="center"
-        android:text="Location" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/editText"
         android:layout_width="326dp"
         android:layout_height="84dp"
         android:layout_marginStart="17dp"
-        android:layout_marginTop="213dp"
+        android:layout_marginTop="378dp"
         android:layout_marginEnd="17dp"
         android:layout_marginBottom="177dp"
         android:ems="10"
         android:hint="Tax Locality"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_sourceNxt"
         android:layout_width="195dp"
         android:layout_height="45dp"
         android:layout_marginStart="83dp"
-        android:layout_marginTop="309dp"
+        android:layout_marginTop="474dp"
         android:layout_marginEnd="81dp"
         android:layout_marginBottom="120dp"
-        android:text="Next" />
-</FrameLayout>
+        android:text="Next"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
