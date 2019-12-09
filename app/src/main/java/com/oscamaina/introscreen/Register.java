@@ -74,11 +74,11 @@ public class Register extends AppCompatActivity implements DisclaimerFragment.on
 //        }
 //    }
 
-    public void onRadioButtonClicked(View view) {
-        RadioGroup radioGroup = findViewById(R.id.Radiogroup);
-        RadioButton radioButton = findViewById(radioGroup.getCheckedRadioButtonId());
-        Toast.makeText(this, radioButton.getText() + " is selected", Toast.LENGTH_SHORT).show();
-    }
+//    public void onRadioButtonClicked(View view) {
+//        RadioGroup radioGroup = findViewById(R.id.Radiogroup);
+//        RadioButton radioButton = findViewById(radioGroup.getCheckedRadioButtonId());
+//        Toast.makeText(this, radioButton.getText() + " is selected", Toast.LENGTH_SHORT).show();
+//    }
 
     public void Back(View view) {
         Intent mainActivity = new Intent(getApplicationContext(), MainActivity.class);
