@@ -13,17 +13,17 @@
     <color name="intro_title_color">#000000</color>
     <color name="intro_description_color">#656565</color>
 
-    <!-- Splush screen color -->
+    <!-- Splash screen color -->
     <color name="splash_screen_color">#05c3f9</color>
     <color name="splash_screen_dark">#0691b8</color>
     <color name="splash_text_color">#ffffff</color>
 
     <!-- Switch Colors   -->
-    <color name="disable_forground_gray">#42221f1f</color>
+    <color name="disable_foreground_gray">#42221f1f</color>
     <color name="disable_thumb_gray">#1c000000</color>
     <color name="enable_thumb_green">#ED1C24</color>
 
-    <!--    Radio button colo-->
+    <!--    Radio button color-->
     <color name="checked_radio_button">#00ff00</color>
 
 </resources>

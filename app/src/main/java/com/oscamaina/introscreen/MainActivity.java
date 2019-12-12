@@ -56,6 +56,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Intent registerActivity = new Intent(getApplicationContext(), Register.class);
                 startActivity(registerActivity);
                 break;
+            case R.id.btn_equiry:
+                Intent navigationDrawer = new Intent(getApplicationContext(), NavigationDrawer.class);
+                startActivity(navigationDrawer);
+                break;
         }
 
     }

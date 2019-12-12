@@ -13,6 +13,7 @@
         <item name="android:windowBackground">@drawable/background_splashscreen</item>
 
     </style>
+
     <style name="SCBSwitch" parent="Theme.AppCompat.Light">
         <!-- active thumb & track color (30% transparency) -->
         <item name="colorControlActivated">#46bdbf</item>
@@ -25,9 +26,24 @@
         <item name="android:colorForeground">#42221f1f
         </item>
     </style>
-    
+
     <style name="RaddioButtonStyle" parent="Theme.AppCompat.Light">
         <item name="colorAccent">@color/checked_radio_button</item>
     </style>
 
+    <style name="default_text_style">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:paddingTop">8dp</item>
+        <item name="android:paddingBottom">8dp</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
